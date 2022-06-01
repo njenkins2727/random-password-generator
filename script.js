@@ -94,6 +94,11 @@ const specialCharType = confirm("Do you want 'special' characters in your passwo
 //validate input (min one selected)
 let allChoices = []
 
+if (!lowerCaseType && !upperCaseType && !numericType && !specialCharType){
+  alert("wrong");
+  return "try again";
+}
+
 if (lowerCaseType === true){
   allChoices = allChoices.concat(lowerCaseList);
 }
@@ -111,11 +116,6 @@ if (specialCharType === true){
 } 
 
 
-//close but not it
-// if (passwordCriteria.values('')){
-//   alert("Invalid - select ONE of the password criteria.");
-//   return "Please try again";
-// }
 
 
 console.log(allChoices); // testing allChoices
