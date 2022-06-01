@@ -3,55 +3,11 @@ const generateBtn = document.querySelector("#generate");
 
 const upperCaseList = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'] 
 
-const lowerCaseList = [
-  'a',
-  'b',
-  'c',
-  'd',
-  'e',
-  'f',
-  'g',
-  'h',
-  'i',
-  'j',
-  'k',
-  'l',
-  'm',
-  'n',
-  'o',
-  'p',
-  'q',
-  'r',
-  's',
-  't',
-  'u',
-  'v',
-  'w',
-  'x',
-  'y',
-  'z',
-];
+const lowerCaseList = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p', 'q','r','s','t','u','v','w','x','y','z',];
 
 const numericList = [0, 1 , 2, 3, 4, 5, 6, 7, 8, 9]
 
-const specialCharactersList = [
-  '@',
-  '%',
-  '+',
-  '\\',
-  '/',
-  "'",
-  '!',
-  '#',
-  '$',
-  '^',
-  '?',
-  ':',
-  ',',
-  ')',]
-
-
-
+const specialCharactersList = ['@','%','+','\\','/',"'",'!','#','$','^','?',':',',',')',]
 
 // Write password to the #password input
 function writePassword() {
@@ -65,7 +21,6 @@ generateBtn.addEventListener("click", writePassword);
 
 
 function generatePassword(){
-  console.log("you clicked the button");
 
  // Please edit your password criteria (confirm)
 const firstPopup = confirm("Please edit your password criteria");
@@ -114,9 +69,6 @@ if (numericType === true){
 if (specialCharType === true){
   allChoices = allChoices.concat(specialCharactersList)
 } 
-
-
-
 
 console.log(allChoices); // testing allChoices
 
