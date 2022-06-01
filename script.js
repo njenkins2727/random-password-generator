@@ -50,6 +50,9 @@ const specialCharactersList = [
   ',',
   ')',]
 
+
+
+
 // Write password to the #password input
 function writePassword() {
   const password = generatePassword();
@@ -75,8 +78,8 @@ if (firstPopup === false){
 
  //validate 8>128
  if (charLength<8 || charLength>128 || isNaN(charLength) ){
-   alert("invalid");
-   return "please try again"
+   alert("Invalid");
+   return "Please try again."
  } 
 
 //ask what 'charType' to include in password (confirm) : lowercase, uppercase, numeric, and/or special characters
@@ -89,7 +92,6 @@ const numericType = confirm("Do you want 'numeric' characters in your password")
 const specialCharType = confirm("Do you want 'special' characters in your password");
 
 //validate input (min one selected)
-
 let allChoices = []
 
 if (lowerCaseType === true){
@@ -107,30 +109,25 @@ if (numericType === true){
 if (specialCharType === true){
   allChoices = allChoices.concat(specialCharactersList)
 } 
+
+
+//close but not it
+// if (passwordCriteria.values('')){
+//   alert("Invalid - select ONE of the password criteria.");
+//   return "Please try again";
+// }
+
+
 console.log(allChoices); // testing allChoices
 
 //generate password with validated criteria 
-  
+let createPassword = '';
 
- 
-
-  for (let index = 0; index < charLength; index++) {
-    console.log(allChoices[Math.floor(Math.random()*allChoices.length)]);  
-    }
-
-
-
-
-//  for (let index = 0; index < charLength; index++) {
-//   console.log(allChoices[Math.floor(Math.random()*allChoices.length)]);  
-//   }
-
-
-
-//display password as alert or in writePassword function 
-
-
-  return "you password here";
+for (let index = 0; index < charLength; index++) {
+   createPassword += allChoices[Math.floor(Math.random()*allChoices.length)];
+}
+//display password in writePassword function 
+  return createPassword;
 }
 
 
